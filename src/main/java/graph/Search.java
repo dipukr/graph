@@ -7,7 +7,7 @@ public class Search {
 	public void DFS(Node node) {
 		visit(node);
 		for (Node adjacentNode: node.adjacentNodes)
-			if (adjacentNode.marked == false)
+			if (!adjacentNode.marked)
 				DFS(adjacentNode);
 	}
 
@@ -18,7 +18,7 @@ public class Search {
 		while (!queue.isEmpty()) {
 			Node currNode = queue.poll();
 			for (Node adjacentNode: currNode.adjacentNodes) {
-				if (adjacentNode.marked == false) {
+				if (!adjacentNode.marked) {
 					visit(currNode);
 					queue.offer(currNode);
 				}
