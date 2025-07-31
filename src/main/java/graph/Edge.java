@@ -2,13 +2,13 @@ package graph;
 
 public class Edge {
 
-	public Node from;
-	public Node to;
+	public Node start;
+	public Node end;
 	public double cost;
 	
-	public Edge(Node from, Node to, double cost) {
-		this.from = from;
-		this.to = to;
+	public Edge(Node start, Node end, double cost) {
+		this.start = start;
+		this.end = end;
 		this.cost = cost;
 	}
 }
